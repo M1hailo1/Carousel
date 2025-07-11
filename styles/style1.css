@@ -4,9 +4,16 @@
   box-sizing: border-box;
 }
 
+section {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .caro1 {
   height: 100vh;
   width: 100%;
   background-color: #073b4c;
   position: relative;
+  scroll-snap-align: start;
 }

@@ -1,42 +1,22 @@
-const carousel2 = document.querySelectorAll(".js-caro2 div");
+const carousel2 = document.querySelectorAll(".js-caro2-div img");
 
-let images = [];
+let currentImageIndex = 0;
 
-let imageIndex = 0;
+shiftImages();
 
-function getImages() {
-  for (let i = 0; i < carousel2.length; i++) {
-    images.push(`https://picsum.photos/800/500?random=${i + 1}`);
+function shiftImages() {
+  carousel2.forEach((image) => {
+    image.classList.remove("show");
+  });
+  carousel2[currentImageIndex].classList.add("show");
+  currentImageIndex++;
+  checkLength();
+}
+
+function checkLength() {
+  if (currentImageIndex === carousel2.length) {
+    currentImageIndex = 0;
   }
 }
 
-getImages();
-
-function addImages(index) {
-  carousel2.forEach((div, i) => {
-    div.innerHTML = "";
-    if (i === index) {
-      const image = document.createElement("img");
-      image.src = images[i];
-      image.classList.add("caro2-div-img");
-      div.appendChild(image);
-      div.style.display = "block";
-    } else {
-      div.style.display = "none";
-    }
-  });
-}
-
-function nextImage() {
-  imageIndex = (imageIndex + 1) % images.length;
-  addImages(imageIndex);
-}
-
-function prevImage() {
-  imageIndex = (imageIndex - 1 + images.length) % images.length;
-  addImages(imageIndex);
-}
-
-setInterval(nextImage, 3000);
-
-addImages(imageIndex);
+setInterval(shiftImages, 1500);
