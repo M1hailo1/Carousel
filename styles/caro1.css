@@ -1,10 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.caro2 {
+.caro1 {
   height: 100vh;
   width: 100%;
   background-color: yellowgreen;
@@ -12,9 +6,16 @@
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
+  position: relative;
 }
 
-.caro2-div {
+.caro1-title {
+  position: absolute;
+  top: 10%;
+  color: white;
+}
+
+.caro1-div {
   width: 90%;
   height: 90%;
   display: flex;

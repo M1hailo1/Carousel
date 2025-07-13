@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carousel Project MM</title>
 
-    <link rel="stylesheet" href="styles/style1.css" />
-    <link rel="stylesheet" href="styles/style2.css" />
+    <link rel="stylesheet" href="styles/title.css" />
+    <link rel="stylesheet" href="styles/caro1.css" />
+    <link rel="stylesheet" href="styles/caro2.css" />
 
+    <script src="scripts/title.js" defer></script>
     <script src="scripts/caro1.js" defer></script>
     <script src="scripts/caro2.js" defer></script>
   </head>
   <body>
     <section>
-      <div class="caro1 js-caro1"></div>
+      <div class="title-div">
+        <h1 class="title-div-h">Carousel Gallery</h1>
+      </div>
 
-      <div class="caro2">
-        <div class="caro2-div js-caro2-div">
+      <div class="caro1">
+        <h2 class="caro1-title">Level I</h2>
+        <div class="caro1-div js-caro1-div">
           <img
             class="hide"
             src="https://picsum.photos/800/500?random=1"
@@ -43,6 +48,11 @@
             alt="image-5"
           />
         </div>
+      </div>
+
+      <div class="caro2">
+        <h2 class="caro2-title">Level II</h2>
+        <div class="caro2-div js-caro2-div"></div>
       </div>
     </section>
   </body>

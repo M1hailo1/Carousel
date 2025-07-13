@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.8rem;
 }
 
 section {
@@ -10,10 +12,17 @@ section {
   overflow-y: scroll;
 }
 
-.caro1 {
+.title-div {
   height: 100vh;
   width: 100%;
   background-color: #073b4c;
-  position: relative;
   scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-div-h {
+  color: white;
+  font-size: 5rem;
 }

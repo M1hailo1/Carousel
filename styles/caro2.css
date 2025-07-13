@@ -1,0 +1,19 @@
+.caro2 {
+  height: 100vh;
+  width: 100%;
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.caro2-title {
+  position: absolute;
+  top: 10%;
+  color: white;
+}
+
+.caro2-div {
+}
