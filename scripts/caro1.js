@@ -1,22 +1,22 @@
 const carousel1 = document.querySelectorAll(".js-caro1-div img");
 
-let currentImageIndex = 0;
+let currentImageIndex1 = 0;
 
-shiftImages();
+shiftImages1();
 
-function shiftImages() {
+function shiftImages1() {
   carousel1.forEach((image) => {
     image.classList.remove("show");
   });
-  carousel1[currentImageIndex].classList.add("show");
-  currentImageIndex++;
-  checkLength();
+  carousel1[currentImageIndex1].classList.add("show");
+  currentImageIndex1++;
+  checkLength1();
 }
 
-function checkLength() {
-  if (currentImageIndex === carousel1.length) {
-    currentImageIndex = 0;
+function checkLength1() {
+  if (currentImageIndex1 === carousel1.length) {
+    currentImageIndex1 = 0;
   }
 }
 
-setInterval(shiftImages, 1500);
+setInterval(shiftImages1, 1500);

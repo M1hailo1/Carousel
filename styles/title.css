@@ -20,9 +20,119 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .title-div-h {
   color: white;
   font-size: 5rem;
+}
+
+.title-div-h span {
+  font-size: 5rem;
+}
+
+.title-span1 {
+  position: relative;
+}
+
+.title-span2 {
+  animation: text-color 2s infinite ease-in-out;
+}
+
+@keyframes text-color {
+  0% {
+    color: yellowgreen;
+  }
+  50% {
+    color: wheat;
+  }
+  100% {
+    color: yellowgreen;
+  }
+}
+
+.pointer-arrow1,
+.pointer-arrow2,
+.pointer-arrow3 {
+  animation: arrow-jump 2s infinite ease-in-out;
+  position: absolute;
+  bottom: 15%;
+}
+
+.pointer-arrow1 {
+  animation-delay: 0ms;
+  height: 100px;
+}
+
+.pointer-arrow2 {
+  animation-delay: 300ms;
+  height: 80px;
+}
+
+.pointer-arrow3 {
+  animation-delay: 600ms;
+  height: 60px;
+}
+
+@keyframes arrow-jump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.star1,
+.star2,
+.star3 {
+  position: absolute;
+  height: 50px;
+  animation: stars-move 1s infinite linear;
+}
+
+.star1 {
+  left: 5%;
+}
+
+.star2 {
+  left: 35%;
+  bottom: 5%;
+}
+
+.star3 {
+  left: 72%;
+  top: 15%;
+}
+
+@keyframes stars-move {
+  0% {
+    rotate: 0deg;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  25% {
+    rotate: 180deg;
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  50% {
+    rotate: 180deg;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  75% {
+    rotate: 180deg;
+    opacity: 0;
+    transform: translateX(0px);
+  }
+  100% {
+    rotate: 360deg;
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
