@@ -1,7 +1,7 @@
-.caro2 {
+.caro3 {
   height: 100vh;
   width: 100%;
-  background-color: wheat;
+  background-color: orange;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,13 +9,13 @@
   position: relative;
 }
 
-.caro2-title {
+.caro3-title {
   position: absolute;
   top: 10%;
   color: white;
 }
 
-.caro2-div {
+.caro3-div {
   width: 90%;
   height: 90%;
   display: flex;
@@ -23,14 +23,14 @@
   align-items: center;
 }
 
-.caro2-image {
+.caro3-image {
   position: absolute;
   transition: all 350ms ease-in-out;
   user-select: none;
   -webkit-user-drag: none;
 }
 
-.caro2-image-1 {
+.caro3-image-1 {
   z-index: 1;
   transform: translateX(-90%);
   height: 35%;
@@ -38,7 +38,7 @@
   box-shadow: -5px 5px 5px black;
 }
 
-.caro2-image-2 {
+.caro3-image-2 {
   z-index: 2;
   transform: translateX(-30%);
   height: 50%;
@@ -46,12 +46,12 @@
   box-shadow: -5px 5px 5px black;
 }
 
-.caro2-image-3 {
+.caro3-image-3 {
   z-index: 3;
   box-shadow: 0px 5px 10px black;
 }
 
-.caro2-image-4 {
+.caro3-image-4 {
   z-index: 2;
   transform: translateX(30%);
   height: 50%;
@@ -59,10 +59,39 @@
   box-shadow: 5px 5px 5px black;
 }
 
-.caro2-image-5 {
+.caro3-image-5 {
   z-index: 1;
   transform: translateX(90%);
   height: 35%;
   opacity: 0.6;
   box-shadow: 5px 5px 5px black;
+}
+
+.caro3-left-button,
+.caro3-right-button {
+  color: white;
+  position: absolute;
+  font-size: 3.5rem;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.caro3-left-button:hover,
+.caro3-right-button:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.caro3-left-button {
+  left: 3%;
+}
+
+.caro3-right-button {
+  right: 3%;
 }

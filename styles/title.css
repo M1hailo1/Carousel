@@ -37,18 +37,24 @@ section {
 }
 
 .title-span2 {
-  animation: text-color 2s infinite ease-in-out;
+  animation: text-color 5s infinite ease-in-out;
 }
 
 @keyframes text-color {
   0% {
     color: yellowgreen;
   }
-  50% {
+  20% {
     color: wheat;
   }
+  40% {
+    color: orange;
+  }
+  60% {
+  }
+  80% {
+  }
   100% {
-    color: yellowgreen;
   }
 }
 
