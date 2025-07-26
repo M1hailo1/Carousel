@@ -21,6 +21,7 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
+  user-select: none;
 }
 
 .title-div-h {
@@ -51,19 +52,21 @@ section {
     color: orange;
   }
   60% {
+    color: red;
   }
   80% {
+    color: darkred;
   }
   100% {
+    color: yellowgreen;
   }
 }
 
-.pointer-arrow1,
-.pointer-arrow2,
-.pointer-arrow3 {
+.pointer-arrow {
   animation: arrow-jump 2s infinite ease-in-out;
   position: absolute;
   bottom: 15%;
+  -webkit-user-drag: none;
 }
 
 .pointer-arrow1 {
@@ -99,6 +102,7 @@ section {
   position: absolute;
   height: 50px;
   animation: stars-move 1s infinite linear;
+  -webkit-user-drag: none;
 }
 
 .star1 {

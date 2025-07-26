@@ -1,0 +1,51 @@
+.caro4 {
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.caro4-title {
+  position: absolute;
+  top: 10%;
+  color: white;
+}
+
+.caro4-div {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  margin: auto;
+}
+
+.caro4-image {
+  position: absolute;
+  user-select: none;
+  left: 0;
+  top: 0;
+  -webkit-user-drag: none;
+  height: 200px;
+  width: 400px;
+  transition: transform 1s;
+}
+
+.caro4-image-1 {
+}
+
+.caro4-image-2 {
+}
+
+.caro4-image-3 {
+}
+
+.caro4-image-4 {
+}
+
+.caro4-image-5 {
+}
