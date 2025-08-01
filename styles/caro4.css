@@ -21,18 +21,16 @@
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;
-  margin: auto;
 }
 
 .caro4-image {
   position: absolute;
+  top: 50%;
+  left: 50%;
   user-select: none;
-  left: 0;
-  top: 0;
   -webkit-user-drag: none;
   height: 200px;
   width: 400px;
-  transition: transform 1s;
 }
 
 .caro4-image-1 {

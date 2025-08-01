@@ -1,16 +1,15 @@
 const carousel4 = document.querySelectorAll(".js-caro4-div img");
 const total4 = carousel4.length;
 let currentImageIndex4 = 0;
+const angle = 360 / total4;
 
 function shiftImages4() {
-  const angle = 360 / total4;
   carousel4.forEach((image, index) => {
-    image.style.transform = `rotateY(${index * angle}deg) translateZ(550px)`;
+    image.style.transform = `rotateY(${index * angle}deg) translateZ(350px)`;
   });
 }
 
 function rotateImages4() {
-  const angle = 360 / total4;
   document.querySelector(
     ".js-caro4-div"
   ).style.transform = `translateZ(-500px) rotateY(${
