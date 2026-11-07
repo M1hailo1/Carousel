@@ -7,6 +7,8 @@
   align-items: center;
   scroll-snap-align: start;
   position: relative;
+  overflow: hidden;
+  perspective: 1200px;
 }
 
 .caro4-title {
@@ -16,34 +18,68 @@
 }
 
 .caro4-div {
-  width: 90%;
-  height: 90%;
+  --radius: 300px;
+  --drag-angle: 0deg;
+  width: min(400px, 55vw);
+  aspect-ratio: 2 / 1;
   position: relative;
-  perspective: 1000px;
   transform-style: preserve-3d;
+  animation: caro4-spin 20s linear infinite;
 }
 
-.caro4-image {
+.caro4-div.is-dragging {
+  animation-play-state: paused;
+}
+
+.caro4-card {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset: 0;
+  transform-style: preserve-3d;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.caro4-div.is-dragging .caro4-card {
+  cursor: grabbing;
+}
+
+.caro4-image,
+.caro4-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  backface-visibility: hidden;
   user-select: none;
   -webkit-user-drag: none;
-  height: 200px;
-  width: 400px;
 }
 
-.caro4-image-1 {
+.caro4-back {
+  transform: rotateY(180deg);
+  border: 12px solid #91633e;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 3px, rgba(78, 53, 29, 0.08) 3px 4px),
+    repeating-linear-gradient(90deg, #c8b28d 0 3px, #bfaa86 3px 4px);
+  box-shadow: inset 0 0 15px rgba(61, 36, 16, 0.4), 0 12px 24px rgba(0, 0, 0, 0.35);
 }
 
-.caro4-image-2 {
+@keyframes caro4-spin {
+  from {
+    transform: translateZ(calc(-1 * var(--radius))) rotateX(-8deg) rotateY(var(--drag-angle));
+  }
+  to {
+    transform: translateZ(calc(-1 * var(--radius))) rotateX(-8deg) rotateY(calc(var(--drag-angle) - 360deg));
+  }
 }
 
-.caro4-image-3 {
-}
-
-.caro4-image-4 {
-}
-
-.caro4-image-5 {
+@media (prefers-reduced-motion: reduce) {
+  .caro4-div {
+    animation: none;
+    transform: translateZ(calc(-1 * var(--radius))) rotateX(-8deg) rotateY(var(--drag-angle));
+  }
 }

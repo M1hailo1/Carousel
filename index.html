@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="styles/caro2.css" />
     <link rel="stylesheet" href="styles/caro3.css" />
     <link rel="stylesheet" href="styles/caro4.css" />
+    <link rel="stylesheet" href="styles/caro5.css" />
 
     <script src="scripts/title.js" defer></script>
     <script src="scripts/caro1.js" defer></script>
     <script src="scripts/caro2.js" defer></script>
     <script src="scripts/caro3.js" defer></script>
     <script src="scripts/caro4.js" defer></script>
+    <script src="scripts/caro5.js" defer></script>
   </head>
   <body>
     <section>
@@ -173,8 +175,12 @@
         </div>
       </div>
 
-      <div class="caro5">
+      <div class="caro5" role="region" aria-roledescription="carousel" aria-label="Level V image gallery" tabindex="0">
+        <div class="caro5-ambient" aria-hidden="true"></div>
+        <header class="caro5-heading">
         <h2 class="caro5-title">Level V</h2>
+        <p class="caro5-hint">Drag to explore · Arrow keys to navigate</p>
+        </header>
         <div class="caro5-div js-caro5-div">
           <img
             class="caro5-image caro5-image-1"
@@ -202,6 +208,13 @@
             alt="image-5"
           />
         </div>
+        <div class="caro5-controls">
+          <button class="caro5-prev" type="button" aria-label="Previous image">&#8592;</button>
+          <div class="caro5-dots" aria-label="Choose an image"></div>
+          <button class="caro5-next" type="button" aria-label="Next image">&#8594;</button>
+          <button class="caro5-play" type="button" aria-label="Pause autoplay" aria-pressed="true">Pause</button>
+        </div>
+        <p class="caro5-count" aria-live="off">01 / 05</p>
       </div>
     </section>
   </body>

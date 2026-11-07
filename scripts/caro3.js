@@ -55,3 +55,22 @@ reRunInterval3();
 
 previous3.addEventListener("click", shiftPreviousImage3);
 next3.addEventListener("click", shiftNextImage3);
+
+const section3 = document.querySelector(".caro3");
+let carousel3InView = false;
+
+new IntersectionObserver(([entry]) => {
+  carousel3InView = entry.isIntersecting && entry.intersectionRatio >= 0.5;
+}, { threshold: 0.5 }).observe(section3);
+
+document.addEventListener("keydown", (event) => {
+  if (!carousel3InView || event.defaultPrevented ||
+      event.altKey || event.ctrlKey || event.metaKey ||
+      event.target.closest("input, textarea, select, [contenteditable]:not([contenteditable='false'])")) return;
+
+  if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    event.preventDefault();
+    if (event.key === "ArrowLeft") shiftPreviousImage3();
+    else shiftNextImage3();
+  }
+});
